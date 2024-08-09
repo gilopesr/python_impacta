@@ -1,4 +1,3 @@
-# Exercicio 2
 # pergunte o tamanho da amostra
 # calcule a Média e o Desvio Padrão da amostra
 
