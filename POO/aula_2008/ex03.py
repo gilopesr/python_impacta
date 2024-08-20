@@ -10,11 +10,13 @@
 
 def conta_vogais(string):
     string = string.lower()
-    resultado = {}
-    vogais = 'aeiou'
-    for i in vogais:
-        if i in string:
-            resultado[i] = string.count(i)
-            return resultado
+    contagem_vogais = {'a': 0, 'e': 0, 'i': 0, 'o': 0, 'u': 0}
 
-print(conta_vogais('faculdade impacta de tecnologia'))
+    for i in string:
+        if i in contagem_vogais:
+            contagem_vogais[i] += 1
+    return contagem_vogais
+
+
+texto = str(input('insira um texto/frase para saber a quantidade de vogais que ele possui: '))
+print(f'o texto possui a seguinte quantidade de vogais: {conta_vogais(texto)}')
