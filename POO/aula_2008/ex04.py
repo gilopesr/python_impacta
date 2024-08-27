@@ -17,12 +17,11 @@ lista1 = []
 lista2 = []
 
 for i in range (3):
-    num = int(input('insira os numeros da lista 1: '))
+    num = int(input(f'insira {i+1}° numero da lista 1: '))
     lista1.append(num)
 
 for i in range (3):
-    num = int(input('insira os numeros da lista 2: '))
+    num = int(input(f'insira {i+1}° numero da lista 2: '))
     lista2.append(num)
-
 
 print(intercala_numeros(lista1,lista2))
