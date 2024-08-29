@@ -5,7 +5,6 @@
 # 153 = 1³ + 5³ + 3³ =  1 + 125 + 27 = 153
 # Escreva um programa peça para o usuário digitar um número e calcule o número
 # de Armstrong.
-# nome:
 
 num = input('digite um número para calcular o numero de Armstrong: ')
 qntd = len(num)
