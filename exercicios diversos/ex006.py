@@ -1,4 +1,4 @@
-#9) Em analise combinatória usamos uma formula para o aranjo
+#6) Em analise combinatória usamos uma formula para o aranjo
 #e outra formula para a combinação
 #n! = n * (n-1) * (n-2) * ... * 2 * 1 para n >= 2 e n = int
 #A = n! / (n-p)!
