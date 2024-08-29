@@ -1,5 +1,4 @@
 # 14) Dada a lista [8,10,5,-3,5,7,1,9] ordenar a lista sem usar o comando sort
-# nome:
 
 lista=[8,10,5,-3,5,7,1,9]
 ordem = []
