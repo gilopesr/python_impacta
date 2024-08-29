@@ -3,11 +3,11 @@
 #Peça para o usuário digitar quantidade de termos da sequência e imprima a sequência
 #de Fibonacci até o n−ésimo termo.
 
-n = int(input('Digite até onde a sequencia de Fibonacci deve ir: '))
-
-fib = [1, 1]
-
-for i in range(2, n):
-  fib.append(fib[i - 1] + fib[i - 2])
-
-print(f'A sequencia da Fibonacci até o {n}° termo\n{fib}')
+qntd = int(input('insira a quantidade da sequencia: '))
+numero = 1
+anterior = 0
+for i in range (qntd):
+    print(numero,end=' ')
+    aux = numero
+    numero += anterior
+    anterior = aux
