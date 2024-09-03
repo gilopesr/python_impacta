@@ -12,6 +12,10 @@
 # • No exemplo de uso, crie algumas disciplinas e associe-as a um
 # professor.
 
+class Disciplina:
+    def __init__(self, nome):
+        self.nome = nome
+
 class Professor:
     def __init__(self, nome):
         self.nome = nome 
@@ -20,14 +24,16 @@ class Professor:
     def adiciona_disciplina(self, disciplina):
         self.disciplinas.append(disciplina)
 
-    def lista_disciplinas(self):
-        return [disciplina.nome for disciplina in self.disciplinas]
 
+professor1 = Professor('ricardo')
+matematica = Disciplina('matematica')
+historia = Disciplina('historia')
+geografia = Disciplina('geografia')
 
-class Disciplina:
-    def __init__(self, nome):
-        self.nome = nome
+professor1.adiciona_disciplina(matematica)
+professor1.adiciona_disciplina(geografia)
 
-prof1 = Professor('joão')
-aula = Disciplina('historia')
-prof1.adiciona_disciplina(aula)
+print(f'professor: {professor1.nome}')
+print(f'materias:')
+for disciplina in professor1.disciplinas:
+    print(f'- {disciplina.nome}')
