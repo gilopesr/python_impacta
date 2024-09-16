@@ -1,0 +1,72 @@
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.set_idade(idade)
+
+    def set_idade(self, idade):
+        while idade < 18:
+            print("Idade invalida, insira uma idade válida")
+            idade = int(input("Idade = "))
+        self.idade = idade
+    
+    def get_idade(self):
+        return self.idade
+
+class Funcionario(Pessoa):
+    def __init__(self, nome, idade, salario):
+        super().__init__(nome, idade)
+        self.__salario = salario
+       
+    def get_salario(self):
+        print(self._Funcionario__salario)
+
+    def set_salario(self, salario):
+        while salario < 0:
+            print("O salario não pode ser negativo")
+            salario = float(input("salario = "))
+        self.__salario = salario
+
+    def calcular_salario_anual(self):
+        return self.__salario * 12
+
+class Departamento:
+    def __init__(self):
+        self.lista_funcionarios = []
+    
+    def adicionar_funcionarios(self,funcionario):
+        self.lista_funcionarios.append(funcionario)
+        
+    def calcular_total_salarios(self):
+        total = 0
+        for funcionario in self.lista_funcionarios:
+            total += funcionario.calcular_salario_anual()
+        print('Soma Total dos Salários: ')
+        print(total)
+
+    def listar_funcionarios(self):
+        if not self.lista_funcionarios:
+            print('não há nenhum funcionario')
+        else:
+            print('Lista de Funcionarios:')
+            for funcionario in self.lista_funcionarios:
+                
+                print(f'Nome:{funcionario.nome}\nSalário Anual: R${funcionario.calcular_salario_anual():.2f}')
+                print('='*15)
+
+
+#testes 
+
+func1 = Funcionario('bruna', 14, 1500)
+func2 = Funcionario('lavinia', 24, 6700)
+func3 = Funcionario('lorena', 18, 2000)
+
+
+dep = Departamento()
+
+dep.adicionar_funcionarios(func1)
+dep.adicionar_funcionarios(func2)
+dep.adicionar_funcionarios(func3)
+
+dep.listar_funcionarios()
+
+dep.calcular_total_salarios()
