@@ -1,0 +1,14 @@
+{
+  "livro": [
+    {
+      "titulo": "Harry Potter e o Prisioneiro de Azkaban",
+      "autor": "JK Rowling",
+      "ano de publicacao": "08/07/1999"
+    },
+    {
+      "titulo": "Coraline",
+      "autor": "Neil Gaiman",
+      "ano de publicacao": "02/07/2002"
+    }
+  ]
+}
